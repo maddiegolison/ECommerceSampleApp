@@ -1,6 +1,6 @@
 # Fresh California Avocados
 
-As a native Californian I know it can be especially difficult to get fresh avocados all over the country, all year long. I have created this sample sample application utilizing Stripe Checkout to demo a web application that would allow people to order their avocados straight from California!
+As a native Californian I know it can be especially difficult to get fresh avocados all over the country, all year long. I have created this sample application, utilizing Stripe Checkout, to build a web application that would allow people to order their avocados straight from California!
 
 ## Running the project
 
