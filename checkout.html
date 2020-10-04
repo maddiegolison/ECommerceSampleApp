@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>California Avocados</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row"  style="margin-top: 5%">
+        <div class="u-pull-right">
+          <label for="Checkout">
+            <span>Total Quantity: </span>
+            <span id="checkoutQuant">0</span>
+            <br>
+            <span>Total Cost: </span>
+            <span id="checkoutVal">0</span>
+            </label>
+          <button class="button-primary" id="checkout-button">Checkout</button>
+          <input class="button-primary" type="submit" value="Empty Cart" onclick="emptyCart()">
+        </div>
+      </div>
+      <div class="row">
+        <div style="margin-top: 5%">
+          <h2>Fresh California Avocados</h2>
+          <p>Get your avocados shipped to you fresh from California!</p>
+        </div>
+      </div>
+      <div class="row">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price Per Unit</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Avocado</td>
+            <td>$2.50</td>
+            <td>
+              <select name="quantity" id="quantity" onchange="onQuantityChange()" class="u-full-width">
+              <option value="">--Please choose an option--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+              <option value="50">50</option>
+          </select>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+       <div class="u-pull-left">
+          <input class="button-primary" type="submit" onclick="addToCart()" value="Add to Cart">
+        </div>
+    </div>
+    </div>
+  </body>
+  <script src="checkout.js" type="text/javascript"></script>
+</html>
