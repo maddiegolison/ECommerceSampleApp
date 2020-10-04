@@ -36,8 +36,6 @@ If the checkout succeeds, the user will be redirected to a confirmation page. Th
 
 ## Technical Details
 
-A paragraph or two about how you approached this problem.
-
 Before digging into anything specific I spent time looking at Stripe's development quickstart guide. There I found a great resource for setting up a very basic web application that allowed me to test my account/public and secret keys. Once I had that working, I started looking for code samples that added items to a cart and performed a checkout.  I was able to find Stripe Checkout and the code tutorial that was provided. It was also relatively simple to run that application and see how I could refactor it to be used for my own.  I added a product on the Dashboard that could be used for my application, and once I had the checkout partially working I was able to inspect the JSON in the Developer Tools to figure out where I could find the Stripe Charge ID for the success page. I ended up holding onto the session ID in my sessionStorage object and then got the payment intent from the session ID, and the charge ID from the first charge in the payment intent (since there was just one this was easy). It seemed like there were many different ways to utilize the APIs to create this web application, but this seemed like simplest/least error prone way to do it.
 
 I decided to use Node and Express because although I do not have a ton of deep web development experience, I did remember building a very basic Express app during my undergraduate studies, which helped me get started with this. My basic experience with JavaScript combined with Stripe's well-documented Node examples, allowed me to figure out how to use these frameworks in this specific context.
